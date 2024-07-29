@@ -7,9 +7,29 @@ const readFile = (filepath) => {
   return data;
 };
 
+const parseData = (data, format) => {
+  let result;
+  switch (format) {
+    case '.json':
+      result = JSON.parse(data);
+      break;
+    default:
+      throw new Error(`Unsupported operator: '${format}'!`);
+  }
+
+  return result;
+};
+
 export default (filepath1, filepath2) => {
   const data1 = readFile(filepath1);
-  const data2 = readFile(filepath2);
+  const extname1 = path.extname(filepath1);
 
-  console.log(`data1:\n${data1}\ndata2:\n${data2}`);
+  const data2 = readFile(filepath2);
+  const extname2 = path.extname(filepath2);
+
+  const parsedData1 = parseData(data1, extname1);
+  const parsedData2 = parseData(data2, extname2);
+
+  console.log(parsedData1);
+  console.log(parsedData2);
 };
