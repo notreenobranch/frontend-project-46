@@ -8,16 +8,12 @@ const readFile = (filepath) => {
 };
 
 const parseData = (data, format) => {
-  let result;
   switch (format) {
     case 'json':
-      result = JSON.parse(data);
-      break;
+      return JSON.parse(data);
     default:
-      throw new Error(`Unsupported operator: '${format}'!`);
+      throw new Error(`Unsupported operator: '${format}'`);
   }
-
-  return result;
 };
 
 export default (filepath1, filepath2) => {
