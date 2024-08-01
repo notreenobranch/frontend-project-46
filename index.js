@@ -10,7 +10,7 @@ const readFile = (filepath) => {
 const parseData = (data, format) => {
   let result;
   switch (format) {
-    case '.json':
+    case 'json':
       result = JSON.parse(data);
       break;
     default:
@@ -22,13 +22,13 @@ const parseData = (data, format) => {
 
 export default (filepath1, filepath2) => {
   const data1 = readFile(filepath1);
-  const extname1 = path.extname(filepath1);
+  const format1 = path.extname(filepath1).slice(1);
 
   const data2 = readFile(filepath2);
-  const extname2 = path.extname(filepath2);
+  const format2 = path.extname(filepath2).slice(1);
 
-  const parsedData1 = parseData(data1, extname1);
-  const parsedData2 = parseData(data2, extname2);
+  const parsedData1 = parseData(data1, format1);
+  const parsedData2 = parseData(data2, format2);
 
   console.log(parsedData1);
   console.log(parsedData2);
