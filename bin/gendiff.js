@@ -1,1 +1,1 @@
-console.log("Welcome to gendiff!");
+console.log('Welcome to gendiff!');
