@@ -16,7 +16,7 @@
   "license": "ISC",
   "author": "Nadya K. <notreenobranch@proton.me>",
   "type": "module",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
