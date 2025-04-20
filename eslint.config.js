@@ -13,7 +13,10 @@ const compat = new FlatCompat({ baseDirectory: __dirname, recommendedConfig: plu
 export default [
   {
     languageOptions: {
-      globals: globals.node,
+      globals: {
+        ...globals.node,
+        ...globals.jest,
+      },
       parserOptions: {
         sourceType: 'module',
         ecmaVersion: 'latest',

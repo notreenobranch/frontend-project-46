@@ -28,4 +28,5 @@ export default (filepath1, filepath2) => {
   }, '');
 
   return `{${diff}\n}`;
+  // console.log(`{${diff}\n}`);
 };
