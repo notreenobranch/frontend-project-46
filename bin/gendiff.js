@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { program } from 'commander';
-import gendiff from '../src/index.js';
+import { program } from 'commander'
+import gendiff from '../src/index.js'
 
 program
   .name('gendiff')
@@ -9,6 +9,6 @@ program
   .helpOption('-h, --help', 'output usage information')
   .arguments('<filepath1> <filepath2>')
   .option('-f, --format [type]', 'output format')
-  .action(gendiff);
+  .action(gendiff)
 
-program.parse();
+program.parse()

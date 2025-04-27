@@ -1,4 +1,4 @@
-import gendiff from '../src/index.js';
+import gendiff from '../src/index.js'
 
 const expected = `{
   - follow: false
@@ -7,10 +7,10 @@ const expected = `{
   - timeout: 50
   + timeout: 20
   + verbose: true
-}`;
+}`
 
-const result = gendiff('__fixtures__/file1.json', '__fixtures__/file2.json');
+const result = gendiff('__fixtures__/file1.json', '__fixtures__/file2.json')
 
 test('gendiff', () => {
-  expect(result).toEqual(expected);
-});
+  expect(result).toEqual(expected)
+})
